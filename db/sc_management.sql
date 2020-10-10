@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2020 at 12:06 PM
+-- Generation Time: Oct 10, 2020 at 12:55 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -33,14 +33,6 @@ CREATE TABLE `courses` (
   `course_details` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `courses`
---
-
-INSERT INTO `courses` (`id`, `course_name`, `course_details`) VALUES
-(4, 'JAva', 'PHP details'),
-(5, 'Ruby', 'Ruby');
-
 -- --------------------------------------------------------
 
 --
@@ -55,21 +47,6 @@ CREATE TABLE `students` (
   `contact_no` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `students`
---
-
-INSERT INTO `students` (`id`, `first_name`, `last_name`, `dob`, `contact_no`) VALUES
-(1, 'Chirag', 'Patel', '0000-00-00 00:00:00', 2147483647),
-(2, 'Chirag', 'Patel', '0000-00-00 00:00:00', 2147483647),
-(3, 'Cj', 'adsgasdg', '0000-00-00 00:00:00', 23432423),
-(4, 'Chirag', 'gasdgasdg', '0000-00-00 00:00:00', 2147483647),
-(5, 'Chirag2', 'gasdgasdg222', '0000-00-00 00:00:00', 2147483647),
-(6, 'Anil', 'PAtel', '0000-00-00 00:00:00', 2147483647),
-(7, 'Sanket', 'PAtel', '0000-00-00 00:00:00', 2147483647),
-(8, 'Ankit', 'PAtel', '0000-00-00 00:00:00', 2147483647),
-(11, 'Dupa 2', 'Lipa', '0000-00-00 00:00:00', 324234234);
-
 -- --------------------------------------------------------
 
 --
@@ -81,21 +58,6 @@ CREATE TABLE `student_courses` (
   `student_id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `student_courses`
---
-
-INSERT INTO `student_courses` (`id`, `student_id`, `course_id`) VALUES
-(21, 1, 3),
-(22, 2, 4),
-(23, 8, 3),
-(24, 7, 5),
-(25, 8, 0),
-(26, 11, 4),
-(27, 2, 4),
-(28, 6, 5),
-(29, 11, 4);
 
 --
 -- Indexes for dumped tables
@@ -127,19 +89,19 @@ ALTER TABLE `student_courses`
 -- AUTO_INCREMENT for table `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `student_courses`
 --
 ALTER TABLE `student_courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
