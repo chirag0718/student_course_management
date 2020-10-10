@@ -26,7 +26,8 @@ class Students
     {
         $this->first_name = $first_name;
         $this->last_name = $last_name;
-        $this->dob = $dob;
+        $dt = \DateTime::createFromFormat('m/d/Y', $dob);
+        $this->dob = $dt->format('Y-m-d');
         $this->contact_no = $contact_no;
 
         // Registering the student
